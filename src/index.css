@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-green: #0a5f38;
+  --secondary-green: #0d7a48;
+  --light-green: #e6f7ef;
+  --dark-green: #053a22;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, var(--light-green) 0%, #ffffff 100%);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, var(--secondary-green) 0%, var(--primary-green) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(10, 95, 56, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-green);
+}
+
+.feature-icon {
+  color: var(--primary-green);
+}
+
+.slide-indicator {
+  transition: all 0.3s ease;
+}
+
+.slide-indicator.active {
+  background-color: var(--primary-green);
+  width: 2.5rem;
+}
+
+.slide-indicator.inactive {
+  background-color: #e0e0e0;
+  width: 0.75rem;
+}
